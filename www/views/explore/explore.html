@@ -1,0 +1,61 @@
+<ion-view>
+    <ion-nav-buttons side="right">
+        <div id="viewMode">
+            <button class="button button-icon icon ion-ios-list-outline" ng-click="modeSwitch()" ng-if="!isFeature()"></button>
+            <button class="button button-icon icon ion-ios-calendar-outline" ng-click="modeSwitch()" ng-if="isFeature()"></button>
+        </div>
+        <button class="button button-icon icon ion-ios-search" ng-click="showFilterBar()"></button>
+    </ion-nav-buttons>
+    <ion-content delegate-handle="main">
+        <ion-scroll delegate-handle="feature" ng-show="isFeature()" style="height:{{height}}px;" on-scroll="getScrollPosistion()">
+
+            <ion-refresher pulling-text="{{'text_refresh' | translate}}" on-refresh="doRefresh()">
+            </ion-refresher>
+            <empty-view msg="{{msg_feature}}"></empty-view>
+            <ion-slide-box auto-play="true" show-pager="false" slide-interval="5000">
+                <ion-slide ng-repeat="banner in feature">
+                    <div class="banner-explore" ng-click="bannerClick({{banner}})">
+                        <img class="filter" ng-src="img/filter.png" alt="">
+                        <div class="banner-explore-bottom">
+                            <h3>{{banner.title}}</h3>
+                            <ul>
+                                <li class="col col-20" ng-show="banner.shareCount >0" ng-class="banner.shareCount >1000?'dazziling':''"><i class="icon ion-share"></i>{{banner.shareCount | count}}</li>
+                                <li class="col col-20" ng-show="banner.viewCount >0" ng-class="banner.viewCount >1000?'dazziling':''"><i class="icon ion-eye"></i>{{ banner.viewCount | count}}</li>
+                                <li class="col col-20"></li>
+                            </ul>
+                        </div>
+                        <img class="banner-explore-photo" ng-src="{{banner.picture}}" alt="">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+            <event-list events="events"></event-list>
+            <ion-infinite-scroll class="spinner-energized" ng-show="hasMore()" on-infinite="feature_load()" distance="1%">
+            </ion-infinite-scroll>
+        </ion-scroll>
+        
+        <ion-scroll delegate-handle="calendar" ng-show="!isFeature()" style="height:{{height}}px;" on-scroll="getScrollPosistion()">
+            <ion-refresher pulling-text="{{'text_refresh' | translate}}" on-refresh="doRefresh()">
+            </ion-refresher>
+            <empty-view msg="{{msg_calendar}}"></empty-view>
+            <div class="item-list-group" ng-repeat="event in group">
+                <div class="item item-divider">{{event.divider *1000 | date:' yyyy-MM-d'}}</div>
+                <event-list events="event.events"></event-list>
+            </div>
+            <ion-infinite-scroll class="spinner-energized" ng-show="hasMore()" on-infinite="calendar_load()" distance="1%">
+            </ion-infinite-scroll>
+        </ion-scroll>
+
+        <!--<ion-slide-box on-slide-changed="calendar_load($index)" show-pager="false">
+            <ion-slide ng-repeat="event in group">
+                <div>month</div>
+                <ion-scroll style="height:92vh;">
+                    <div class="item-list-group" ng-repeat="event in group">
+                        <div class="item item-divider">{{event.divider *1000 | date:' yyyy-MM-d'}}</div>
+                        <event-list events="event.events"></event-list>
+                    </div>
+                </ion-scroll>
+            </ion-slide>
+        </ion-slide-box>-->
+    </ion-content>
+    <button ng-show="showUp" class="button button-up icon ion-circle-up button-energized" ng-click="scrollToUp()"></button>
+</ion-view>

@@ -1,0 +1,8 @@
+<div class="item item-avatar item-badge" ng-class="badge.create!=null ?'':'disable'"  ng-click="showMetal(badge)">
+    <img ng-src="{{badge.picture}}" alt="">
+    <h3>{{badge.name}}</h3>
+    <!--<i class="icon balanced ion-ios-checkmark"></i>-->
+    <p>{{badge.content | htmlToPlaintext}}</p>
+    <span class="date" ng-show="badge.create"> {{badge.create*1000 | date:'d/M/yy' }}</span>
+    <span ng-show="badge.point > 0" class="badge-point">{{badge.point}}</span>
+</div>

@@ -1,0 +1,438 @@
+{
+    "coupons": [{
+            "coupon_id": "7",
+            "store": {
+                "name": "Flying Bike",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": "Car rental for 10% off, this discount can't be redeemeed with other coupons.",
+            "lat": "24.8489623",
+            "lng": "120.9280103",
+            "special": false,
+            "distance": "7646",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "5",
+            "store": {
+                "name": "Harry Potter bike",
+                "picture": ""
+            },
+            "name": "20% off",
+            "content": null,
+            "lat": "24.8469271",
+            "lng": "120.9244969",
+            "special": false,
+            "distance": "7676",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "40",
+            "store": {
+                "name": "N.118",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": "<p>套餐類10% off，飲料、點心及輕食類恕不折扣</p>\n",
+            "lat": "24.8482632",
+            "lng": "120.9286848",
+            "special": false,
+            "distance": "7747",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "2",
+            "store": {
+                "name": "Car renting",
+                "picture": ""
+            },
+            "name": "90% off",
+            "content": null,
+            "lat": "24.8480301",
+            "lng": "120.928456",
+            "special": false,
+            "distance": "7759",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "4",
+            "store": {
+                "name": "Car renting 3",
+                "picture": ""
+            },
+            "name": "90% off",
+            "content": null,
+            "lat": "24.8461861",
+            "lng": "120.9263792",
+            "special": false,
+            "distance": "7839",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "6",
+            "store": {
+                "name": "Flying bike N.2",
+                "picture": ""
+            },
+            "name": "90% off",
+            "content": null,
+            "lat": "24.8458226",
+            "lng": "120.9275234",
+            "special": false,
+            "distance": "7930",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "3",
+            "store": {
+                "name": "家祥車業有限公司2",
+                "picture": ""
+            },
+            "name": "90% off",
+            "content": null,
+            "lat": "24.8451664",
+            "lng": "120.9284524",
+            "special": false,
+            "distance": "8039",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "31",
+            "store": {
+                "name": "Homebox好博家桃園店",
+                "picture": ""
+            },
+            "name": "\"10% off",
+            "content": null,
+            "lat": "24.9848335",
+            "lng": "121.2861718",
+            "special": false,
+            "distance": "1482",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "30",
+            "store": {
+                "name": "Homebox好博家新竹店",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": null,
+            "lat": "24.8068641",
+            "lng": "120.957024",
+            "special": false,
+            "distance": "3162",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "26",
+            "store": {
+                "name": "大埔鐵板燒(新莊店)",
+                "picture": ""
+            },
+            "name": "free steamed rice",
+            "content": "<p>每個套餐享一碗白飯免費優惠. 限內用</p>\n",
+            "lat": "25.049513",
+            "lng": "121.4564354",
+            "special": false,
+            "distance": "3255",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "72",
+            "store": {
+                "name": "V-Space 價值空間髮藝沙龍（縣政店）",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": "<p>當次來店消費可享洗＋剪／燙髮／染髮／護髮 9折，下次到店護髮77折券（使用期限：一個月），優惠項目不包含：產品、局部性燙髮＆染髮、單洗髮、單剪髮、頭皮Spa</p>\n",
+            "lat": "24.834856",
+            "lng": "121.0196164",
+            "special": false,
+            "distance": "3425",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "77",
+            "store": {
+                "name": "御茗閣",
+                "picture": ""
+            },
+            "name": "buy 10 get one free",
+            "content": "<p>買十送一</p>\n",
+            "lat": "24.8117987",
+            "lng": "120.975900000",
+            "special": false,
+            "distance": "3585",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "59",
+            "store": {
+                "name": "淺草屋平價壽司屋",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": null,
+            "lat": "24.810039",
+            "lng": "120.9769614",
+            "special": false,
+            "distance": "3809",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "76",
+            "store": {
+                "name": "淺草屋",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": "<p>10% off</p>\n",
+            "lat": "24.810039",
+            "lng": "120.976961399",
+            "special": false,
+            "distance": "3809",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "75",
+            "store": {
+                "name": "大和川",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": "<p>消費10% off</p>\n",
+            "lat": "24.8099715",
+            "lng": "120.977004800",
+            "special": false,
+            "distance": "3817",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "8",
+            "store": {
+                "name": "夏卡瓦咖啡",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": null,
+            "lat": "24.8099135",
+            "lng": "120.9780989",
+            "special": false,
+            "distance": "3876",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "54",
+            "store": {
+                "name": "紅番茄無煙鐵板燒",
+                "picture": ""
+            },
+            "name": "10% off(不含酒類)",
+            "content": "<p>平時持識別證除酒類外可享有10% off(不含活動促銷期間)</p>\n",
+            "lat": "24.8290843",
+            "lng": "121.0174009",
+            "special": false,
+            "distance": "3884",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "67",
+            "store": {
+                "name": "清心福全（竹北縣政店）",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": null,
+            "lat": "24.8290523",
+            "lng": "121.0173833",
+            "special": false,
+            "distance": "3886",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "39",
+            "store": {
+                "name": "新美乃斯食品行",
+                "picture": ""
+            },
+            "name": "自製品享9折",
+            "content": null,
+            "lat": "24.8054504",
+            "lng": "120.969677",
+            "special": false,
+            "distance": "3908",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "68",
+            "store": {
+                "name": "清心福全（竹北光明店喜來登旁）",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": null,
+            "lat": "24.8251933",
+            "lng": "121.0133609",
+            "special": false,
+            "distance": "4071",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "29",
+            "store": {
+                "name": "Homebox好博家竹北店",
+                "picture": ""
+            },
+            "name": "\"10% off",
+            "content": null,
+            "lat": "24.8258874",
+            "lng": "121.0157136",
+            "special": false,
+            "distance": "4116",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "35",
+            "store": {
+                "name": "玉山眼鏡",
+                "picture": ""
+            },
+            "name": "除特價品外，其他90% off",
+            "content": null,
+            "lat": "24.804304",
+            "lng": "120.9724124",
+            "special": false,
+            "distance": "4152",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "28",
+            "store": {
+                "name": "色杯子絕色飲品",
+                "picture": ""
+            },
+            "name": "來店消費9折",
+            "content": null,
+            "lat": "24.8007818",
+            "lng": "120.9673243",
+            "special": false,
+            "distance": "4253",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "9",
+            "store": {
+                "name": "凸鼻子咖啡坊",
+                "picture": ""
+            },
+            "name": "消費滿100元，贈每日精選咖啡一杯",
+            "content": null,
+            "lat": "24.8051869",
+            "lng": "120.9773615",
+            "special": false,
+            "distance": "4303",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "58",
+            "store": {
+                "name": "雅啤川菜",
+                "picture": ""
+            },
+            "name": "現金9折 .刷卡10% off。",
+            "content": null,
+            "lat": "24.8032763",
+            "lng": "120.9795017",
+            "special": false,
+            "distance": "4593",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "50",
+            "store": {
+                "name": "妃愛美甲Salon",
+                "picture": ""
+            },
+            "name": "服務項目享9折，產品除外",
+            "content": null,
+            "lat": "24.8230789",
+            "lng": "121.029475",
+            "special": false,
+            "distance": "5051",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "74",
+            "store": {
+                "name": "V-Space 價值空間髮藝沙龍（成功店）",
+                "picture": ""
+            },
+            "name": "洗＋剪／燙髮／染髮／護髮 9折",
+            "content": "<p>當次來店消費可享洗＋剪／燙髮／染髮／護髮 9折，下次到店護髮77折券（使用期限：一個月），優惠項目不包含：產品、局部性燙髮＆染髮、單洗髮、單剪髮、頭皮Spa</p>\n",
+            "lat": "24.8196193",
+            "lng": "121.0226334",
+            "special": false,
+            "distance": "5062",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "53",
+            "store": {
+                "name": "風城之月",
+                "picture": ""
+            },
+            "name": "現金9折，刷卡10% off",
+            "content": null,
+            "lat": "24.8184743",
+            "lng": "121.0224085",
+            "special": false,
+            "distance": "5164",
+            "private": false,
+            "point": 10
+        },
+        {
+            "coupon_id": "65",
+            "store": {
+                "name": "竹田經典拉麵",
+                "picture": ""
+            },
+            "name": "10% off",
+            "content": null,
+            "lat": "24.8191273",
+            "lng": "121.0262717",
+            "special": false,
+            "distance": "5285",
+            "private": false,
+            "point": 10
+        }
+    ]
+}

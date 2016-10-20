@@ -1,0 +1,81 @@
+<ion-view>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon ion-heart" ng-class="event.liked?'button-liked':''" ng-click="like_button()"></button>
+    </ion-nav-buttons>
+    <ion-content scroll="{{loaded}}" id="event" scroll-sista delegate-handle="myScrollDelegate">
+        <div class="event-header" style="background-image:url({{event.picture}});">
+            <div class="event-header-contain" ng-click="showPhoto()">
+                <div class="event-header-content">
+                    <h3> {{event.title}}</h3>
+                    <ul>
+                        <li ng-show="event.shareCount >0"><i class="icon ion-share"></i>{{event.shareCount}}</li>
+                        <li ng-show="event.viewCount >0"><i class="icon ion-eye"></i>{{event.viewCount}}</li>
+                    </ul>
+                    <p ng-show="event.start">{{event.dateTime}}</p>
+                </div>
+                <div class="event-sponsor">
+                </div>
+            </div>
+        </div>
+        <div class="event-content">
+            <div class="list card">
+                <div class="item-info">
+                    <p>
+                        {{event.content | htmlToPlaintext}}
+                    </p>
+
+                    <button class="button button-clear button-small button-energized icon icon-left ion-location" ng-click="navigation();">{{event.address}}</button>
+                    <!--<span class="event-address" ng-if="event.address_memo.length != 0">({{event.address_memo}})</span>-->
+                    <div class="center" style="padding:5px;">
+                        <button class="button button-energized button-small" ng-click="more(event.link)">{{'btn_more'| translate}}</button>
+                    </div>
+
+                </div>
+
+                <div class="item-reward">
+                    <div class="item-header">{{'text_reward'| translate}}
+                        <button class="button icon button-small button-clear icon-left ion-ios-information" ng-click="rewardInfor()">{{'btn_reward_gain' | translate}}</button>
+                    </div>
+
+                    <ul ng-show="event.rewards">
+                        <li ng-repeat="reward in event.rewards">{{reward.content}} ({{reward.amount}})</li>
+                    </ul>
+
+                    <span class="item item-catagories">
+                        <points point="{{'text_point' | translate}}"></points>
+                    </span>
+                </div>
+
+                <div class="item-requirement" ng-show="event.requirement" ng-click="">
+                    <div class="item-header item-requirement-header">{{'text_requirement' | translate}}
+                    </div>
+                    <div style="padding:8px;">
+                        <img ng-src="{{event.requirement.badge}}" alt="">
+                        <span>{{event.requirement.name}}</span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="item-organizer list card">
+                <div class="item-header">{{'text_organizer' | translate}}</div>
+                <div class="event-organizer-content">
+                    <h4>{{event.organizer.name}}</h4>
+                    <a class="button button-clear button-dark icon icon-left ion-ios-telephone" href="tel:{{event.organizer.phone}}">{{event.organizer.phone}}</a>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+    <div class="row event-footer">
+        <div class="col col-33">
+            <button class="button icon button-icon button-dark ion-share" ng-click="quest_share()"></button>
+        </div>
+        <div class="col col-33">
+            <button class="button icon button-icon button-dark ion-qrcode" scanner>
+            </div>
+            <div class="col col-33">
+                <button class="button icon button-icon button-dark ion-ios-calendar-outline" ng-click="calendar()">
+            </div>
+        </div>
+</ion-view>

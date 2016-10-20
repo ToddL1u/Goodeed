@@ -1,0 +1,26 @@
+<ion-view>
+    <ion-nav-title>
+        {{search}}
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button icon button-icon ion-ios-location" ng-click="location()"></button>
+    </ion-nav-buttons>
+    <ion-content delegate-handle="eventList" on-scroll="getScrollPosistion()">
+        <form action="">
+            <div class="bar bar-header item-input-inset">
+                <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    
+    <input type="search" ng-model="data.search" placeholder="{{'text_search' |translate}}" ng-change="textSearch()">
+    <button type="reset" ng-if="data.search!=null || data.search.length==0" class="button button-icon button-clear button-small ion-ios-close-empty"></button>
+  </label>
+                <button type="reset" class="button button-clear" ng-click="reset()">{{'btn_reset' | translate}}</button>
+            </div>
+        </form>
+        <empty-view msg="{{msg}}"></empty-view>
+        <event-list events="events"></event-list>
+        <ion-infinite-scroll ng-show="hasMore()" on-infinite="loadMore()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+    <button ng-show="showUp" class="button button-up icon ion-circle-up button-energized" ng-click="scrollToUp()"></button>
+</ion-view>

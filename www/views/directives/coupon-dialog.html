@@ -1,0 +1,13 @@
+<button class="button icon button-icon ion-location coupon-location" ng-click="mapview(coupon)"></button>
+<div class="coupon-dialog-header">
+    <img class="store" ng-src="{{coupon.store.picture}}" alt="">
+    <!--<h2>{{coupon.title}}</h2>-->
+</div>
+<div class="center">
+    <p>{{coupon.content | htmlToPlaintext}}</p>
+    <p ng-show="coupon.private" class="coupon-private">{{'text_coupon_private' | translate}}</p>
+    <span class="points">
+                <img src="img/seed_gift.png" alt="">
+                <span>{{coupon.point}} {{'text_to' |translate}} {{coupon.store.name}}</span>
+    </span>
+</div>

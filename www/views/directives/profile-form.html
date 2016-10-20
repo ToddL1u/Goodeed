@@ -1,0 +1,19 @@
+<div class="list">
+    <img ng-src="{{userData.avatar}}" class="profile-avatar profile-photo" ng-click="choosePhoto()" alt="">
+    <label class="signup-top item item-input">
+                    <input type="text" placeholder="{{'name' | translate}}" ng-model="userData.name">
+                </label>
+
+    <label class="item item-input">
+                    <input type="{{type}}" ng-focus="pwdType('text')" ng-blur="pwdType('password')" placeholder="{{'pwd' | translate}}" ng-model="userData.pwd">
+                </label>
+    <label class=" item item-input">
+                    <input type="email" placeholder="{{'email' | translate}}"  ng-model="userData.email">
+                </label>
+    <label class="item item-input">
+                    <input type="tel" placeholder="{{'phone' | translate}}" ng-model="userData.phone">
+                </label>
+    <label class="item item-input">
+                    <input type="text" placeholder="{{'address' | translate}}" ng-model="userData.address">
+                </label>
+</div>

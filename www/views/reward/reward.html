@@ -1,0 +1,17 @@
+<ion-view>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="scratch()">{{'btn_stratch' | translate}}</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher pulling-text="{{'text_refresh' | translate}}" on-refresh="doRefresh()"></ion-refresher>
+        <div class="list">
+            <loading list="rewards"  msg="{{msg}}"></loading>
+            <div class="item item-reward item-avatar item-icon-right" ng-repeat="reward in rewards" ng-click="showReward(reward)">
+                <img class="reward" alt="">
+                <h3>{{reward.name}}</h3>
+                <p>{{'text_expiration' | translate}} {{ reward.exp*1000 | date:'y-MM-d, h:mm:ss'}} </p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

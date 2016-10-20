@@ -1,0 +1,51 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-content scroll="false">
+            <div class="menu-header">
+                <div class="item item-avatar" ng-hide="login" ng-click="signIn()">
+
+                    <img ng-src="img/avatar.png">
+                    <div class="login">
+                        {{'login' | translate}}
+                    </div>
+                </div>
+                <div class="item item-avatar" menu-close ng-show="login" ng-click="profile()">
+                    
+                    <img class="profile-avatar" ng-src="{{user.avatar}}">
+                    <div>
+                        <h2>{{user.name}}</h2>
+                        <points point="{{user.point}}"></points>
+                    </div>
+                </div>
+            </div>
+
+            <ion-list id="menu">
+                <ion-item class="item-icon-left" ng-repeat="page in appPages" ng-click="{{page.action}}">
+                    <i class="icon {{page.icon}}"></i>{{page.title | translate}}
+                </ion-item>
+            </ion-list>
+            <div class="center">
+                <button class="button button-energized button-fab menu-qrcode large-button" scanner>
+                    <i class="icon ion-qrcode"></i>
+                </button>
+            </div>
+
+        </ion-content>
+
+    </ion-side-menu>
+
+</ion-side-menus>

@@ -1,0 +1,28 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <div class="buttons">
+            <button class="button button-icon button-clear" ng-click="cancel()">{{'btn_cancel' | translate}}</button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-clear " ng-click="update()">{{'btn_go' | translate}}</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ul class="list">
+            <li class="item item-icon-left item-toggle " catagory="{{catagory.cata}}" ng-repeat="catagory in catagories">
+                <i class="icon" ng-class="catagory.icon"></i> {{catagory.text}}
+                <label class="toggle toggle-energized">
+                    <input type="checkbox" ng-model="_temp_filter[catagory.cata]" secondary>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+        </ul>
+
+    </ion-content>
+    <ion-footer-bar class="item-reset">
+        <button class="button button-balanced button-block button-energized" ng-click="reset_filter()">{{'btn_reset' | translate}}</button>
+    </ion-footer-bar>
+</ion-modal-view>

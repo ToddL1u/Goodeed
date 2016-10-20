@@ -1,0 +1,37 @@
+<ion-view>
+    <ion-nav-title>
+        <points class="badge-header" point="{{my_point}}"></points>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <!--<div id="viewMode">
+            <button class="button button-icon icon ion-ios-list-outline" ng-click="modeSwitch()" ng-if="!isFeature()"></button>
+            <button class="button button-icon icon ion-ios-calendar-outline" ng-click="modeSwitch()" ng-if="isFeature()"></button>
+        </div>-->
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <tab-slide-box tab="1">
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp">
+                    <!--<ion-scroll direction="x" class="tsb-hscroll">-->
+                    <a href="javascript:;" class="{{catagory.icon}}" catagory="{{catagory.cata}}" ng-repeat="catagory in catagories" on-finish-render="test()"></a>
+                    <!--</ion-scroll>-->
+                </div>
+            </div>
+
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)" delegate-handle="badgeList">
+                <ion-slide ng-repeat="catagory in catagories">
+                    <div class="badge-item-header" catagory="{{catagory.cata}}">
+                        <strong>{{catagory.text}}<span ng-show="total[$index]"> ({{gain[$index]}}/{{total[$index]}})</span></strong></div>
+                    <ion-scroll locking="false" direction="y" delegate-handle="scroll-{{catagory.cata}}" style="height:{{height}}px;">
+                        <div class="list">
+                            <loading list="badges[$index]" msg="{{msg[$index]}}"></loading>
+                            <metal-item ng-repeat="badge in badges[$index]"></metal-item>
+                        </div>
+                    </ion-scroll>
+                </ion-slide>
+
+            </ion-slide-box>
+        </tab-slide-box>
+    </ion-content>
+</ion-view>

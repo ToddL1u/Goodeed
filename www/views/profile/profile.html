@@ -1,0 +1,50 @@
+<ion-view>
+    <ion-nav-title>
+        <ti-segmented-control ng-if="header_panel" on-select="buttonClicked($index)">
+            <ti-segmented-control-button class="button button-dark icon ion-heart" id="like" selected></ti-segmented-control-button>
+            <ti-segmented-control-button class="button button-dark icon ion-ios-timer" id="history"></ti-segmented-control-button>
+        </ti-segmented-control>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-edit" ng-click="edit()"></button>
+    </ion-nav-buttons>
+    <ion-content scroll="false">
+        <!--<ion-refresher pulling-text="{{'text_refresh' | translate}}" on-refresh="doRefresh()">
+            </ion-refresher>-->
+        <div class="profile-header">
+            <div class="row">
+                <img class="profile-avatar profile-photo larger" ng-src="{{user.avatar}}">
+            </div>
+            <div class="row" style="margin-top:5px;">
+                <h4>{{user.name}}</h4>
+            </div>
+            <!--<ti-segmented-control on-select="buttonClicked($index)">
+                <ti-segmented-control-button class="button button-dark icon ion-heart" id="like" selected></ti-segmented-control-button>
+                <ti-segmented-control-button class="button button-dark icon ion-ios-timer" id="history">
+                </ti-segmented-control-button>
+            </ti-segmented-control>-->
+        </div>
+        <ion-scroll ng-show="selectedIndex==0" ng-show="!isFeature()" style="height:{{height}}px;" >
+            
+            <empty-view msg="{{empty_like}}"></empty-view>
+            <event-list events="events"></event-list>
+            <ion-infinite-scroll ng-show="hasMore()" on-infinite="like_load()" distance="1%">
+            </ion-infinite-scroll>
+        </ion-scroll>
+        <ion-scroll ng-show="selectedIndex==1" style="height:{{height}}px;" >
+            <div class="list history">
+                <empty-view msg="{{empty_history}}"></empty-view>
+                <div class="item" ng-repeat="history in historyList">
+                    <div>
+                        <span>#{{history.type}}</span>
+                        <p style="display:inline;">{{history.time*1000 | date:' @ d/MM/yy h:mm'}}</p>
+                        <h2>{{history.name}}</h2>
+                    </div>
+                </div>
+                <ion-infinite-scroll ng-show="hasMore()" on-infinite="history_load()" distance="1%">
+                </ion-infinite-scroll>
+            </div>
+        </ion-scroll>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <div class="buttons">
+            <button class="button button-clear " ng-click="applyMember()" ng-disabled="disable">{{'btn_apply' | translate}}</button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeModal()">{{'btn_cancel' | translate}}</button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list card center">
+            <div class="item item-body">
+                <div ng-if="org==null">
+                    <button class="button button-energized button-fab large-button" ng-click="chooseOrg()">
+                    <i class="icon ion-gd-medal"></i>
+                    </button>
+                </div>
+                <div ng-if="org">
+                    <img class="large-button" ng-src="{{org.picture}}" alt="" ng-click="chooseOrg()">
+                    <br>
+                    <span ng-if="org.o_id != 0">{{org.name}}</span>
+                    <input ng-if="org.o_id == 0" type="text" style="text-align:center;display:initial;" ng-model="userData.org" placeholder="{{'text_organization_name' | translate}}">
+                </div>
+                <p>{{'text_member' | translate}}</p>
+            </div>
+            <div class="item item-image member-badge" ng-click="membeBadge()">
+                <img style="width:100%;" ng-if="userData.badge" ng-src="{{badge}}">
+                <button ng-if="userData.badge==null" class="button button-icon ion-camera"></button>
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-modal-view>

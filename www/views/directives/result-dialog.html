@@ -1,0 +1,14 @@
+<div>
+    <div class="center result-dialog-return">
+        <ion-slide-box ng-if="result.badges" show-pager="false" class="height:200px;">
+            <ion-slide ng-repeat="badge in result.badges">
+                <img style="width:60%;" ng-src="{{badge.picture}}" alt="">
+            </ion-slide>
+        </ion-slide-box>
+        <br>
+        <div ng-show="result.message">{{result.message}}</div>
+    </div>
+    <span ng-if="result.point > 0 || result.extra!=''" class="item item-catagories">
+        <points point="+{{result.point}}" extra="{{result.extra}}"></points>
+    </span>
+</div>

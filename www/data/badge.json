@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Trick or Treat!",
+        "content": "在萬聖節執行執行10次任務",
+        "picture": "img/badge/images.png",
+        "enable": true,
+        "gain": 1461906764,
+        "point": 2
+    },
+    {
+        "name": "老子就是錢多(5,000分)",
+        "content": "累積5,000分",
+        "picture": "img/badge/images-6.png",
+        "enable": false,
+        "point": 10
+    },
+    {
+        "name": "老子就是錢多(10,000分)",
+        "content": "累積10,000分",
+        "picture": "img/badge/images-6.png",
+        "enable": false,
+        "point": 10
+    },
+    {
+        "name": "地球超人",
+        "content": "參加環保任務1000次",
+        "picture": "img/badge/images-1.png",
+        "enable": false,
+        "point": 20
+    },
+    {
+        "name": "無與倫比的美麗",
+        "content": "參與公益好事500次",
+        "picture": "img/badge/images-2.png",
+        "enable": true,
+        "point": 10
+    },
+    {
+        "name": "嗡~嗡~嗡~",
+        "content": "同時在一天參與兩場活動",
+        "picture": "img/badge/images-5.png",
+        "enable": false,
+        "point": 10
+    },
+    {
+        "name": "badge4",
+        "content": "how to get this badge",
+        "picture": "img/badge/images-4.png",
+        "enable": true,
+        "point": 20
+    }
+]
