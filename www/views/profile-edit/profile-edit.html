@@ -1,0 +1,16 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeModal()">{{'btn_cancel' | translate}}</button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-clear " ng-click="update()">{{'btn_done' | translate}}</button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <form id="signUp" ng-submit="update()">
+            <profile-form user-data="userData"></profile-form>
+        </form>
+    </ion-content>
+</ion-modal-view>

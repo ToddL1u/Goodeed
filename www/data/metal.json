@@ -1,0 +1,53 @@
+{
+    "badges": [{
+            "name": "'Tis the Season",
+            "content": "During the Feast of Winter Veil, wear 3 pieces of winter clothing and eat Graccu's Mince Meat Fruitcake.",
+            "picture": "img/metals/05.png",
+            "point": 5
+        },
+        {
+            "name": "10 Exalted Reputations",
+            "content": "Raise 10 reputations to Exalted.",
+            "picture": "img/metals/06.png",
+            "point": 5
+        },
+        {
+            "name": "10 Cooking Awards",
+            "content": "Obtain 10 Cooking Awards.",
+            "picture": "img/metals/07.png",
+            "point": 5
+        },
+        {
+            "name": "Better Leveling Through Chemistry",
+            "content": "Create 3,000 Cataclysm flasks.",
+            "picture": "img/metals/08.png",
+            "point": 5,
+            "create": 1472081554
+        },
+        {
+            "name": "Dinner Party",
+            "content": "Place 1,500 Feasts.",
+            "picture": "img/metals/09.png",
+            "point": 5,
+            "create": 1472081554
+        },
+        {
+            "name": "25,000 Conquest Points",
+            "content": "Earn 25,000 Conquest Points",
+            "picture": "img/metals/10.png",
+            "point": 5
+        },
+        {
+            "name": "Pandaren Angler",
+            "content": "Catch 25,000 fish from Pandaria fishing pools.",
+            "picture": "img/metals/11.png",
+            "point": 5
+        },
+        {
+            "name": "Set the Oven to \"Cataclysmic\"",
+            "content": "Cook 5,000 Cataclysm cooking recipes.",
+            "picture": "img/metals/12.png",
+            "point": 5
+        }
+    ]
+}

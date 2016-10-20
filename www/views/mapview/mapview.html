@@ -1,0 +1,13 @@
+<ion-view>
+    <ion-nav-buttons side="right">
+        <button class="button icon button-icon ion-ios-location" ng-click="setCurrent()"></button>
+    </ion-nav-buttons>
+    <ion-content data-tap-disabled="true" style="hasHeader">
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" events="map.event" bounds="map.bounds">
+            <ui-gmap-markers models="couponMarkers" coords="'self'" click="click">
+            </ui-gmap-markers>
+
+        </ui-gmap-google-map>
+        <coupon-item class="webview-coupon" coupon="coupon" ng-if="coupon"></coupon-item>
+    </ion-content>
+</ion-view>

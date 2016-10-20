@@ -1,0 +1,37 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeModal()">{{'btn_cancel' | translate}}</button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-clear button-energized" ng-click="doSignIn()">{{'btn_go' | translate}}</button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <button class="button button-block button-positive icon-left ion-social-facebook" ng-click="facebook()">
+            {{"login_facebook" | translate}}
+        </button>
+
+        <ti-segmented-control on-select="buttonClicked($index)" style="margin-bottom:15px;">
+            <ti-segmented-control-button class="button-dark" id="login" title="{{'login' | translate}}" selected></ti-segmented-control-button>
+            <ti-segmented-control-button class="button-dark" id="signup" title="{{'signUp' | translate}}"></ti-segmented-control-button>
+        </ti-segmented-control>
+        <form ng-submit="doLogin()" ng-show="selectedIndex==0">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="email" required placeholder="{{'email' | translate}}" ng-model="userData.email">
+                </label>
+                <label class="item item-input">
+                    <input type="password" required placeholder="{{'pwd' | translate}}" ng-model="userData.pwd">
+                </label>
+            </div>
+            <div class="center"><button class="button button-clear button-small button-dark" ng-click="resetPwd()">{{'btn_resetPwd' | translate}}</button></div>
+        </form>
+        <form id="signUp" ng-submit="doLogin()" ng-show="selectedIndex==1">
+            <div class="list">
+                <profile-form disable-button="true"></profile-form>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

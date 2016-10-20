@@ -1,0 +1,18 @@
+<div class="card" ng-click="showEvent(event)" >
+    <div class="item item-image">
+        <img ng-src="{{event.picture}}" alt="">
+    </div>
+    <div class="item-explore catagories" catagory="{{event.type}}">
+        <div>
+            <h4>{{event.title}}</h4>
+            <ul>
+                <li ng-show="event.shareCount >0" ng-class="event.shareCount >1000?'dazziling':''"> <i class="icon ion-share " ></i>
+                {{event.shareCount | count}}</li>
+                <li ng-show="event.viewCount >0" ng-class="event.viewCount >1000?'dazziling':''" ><i class="icon ion-eye"></i>{{event.viewCount | count}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="item-sponsors">
+        
+    </div>
+</div>

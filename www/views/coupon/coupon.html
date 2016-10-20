@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-nav-title>
+        <!--<ti-segmented-control>
+            <ti-segmented-control-button class="button-light button icon ion-list-unordered" selected></ti-segmented-control-button>
+            <ti-segmented-control-button class="button-light button icon ion-grid"></ti-segmented-control-button>
+        </ti-segmented-control>-->
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-earth" ng-click="mapview()"></button>
+    </ion-nav-buttons>
+    <ion-content delegate-handle="couponList" on-scroll="getScrollPosistion()">
+        <ion-refresher pulling-text="{{'text_refresh' | translate}}" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <div class="list">
+            <coupon-item coupon="coupon" ng-repeat="coupon in coupons "></coupon-item>
+            <ion-infinite-scroll ng-if="hasMore()" on-infinite="loadMore()" distance="10%">
+            </ion-infinite-scroll>
+            <empty-view msg="{{msg}}"></empty-view>
+        </div>
+
+    </ion-content>
+    <button ng-show="showUp" class="button button-up icon ion-circle-up button-energized" ng-click="scrollToUp()"></button>
+</ion-view>

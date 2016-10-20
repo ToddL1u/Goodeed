@@ -1,0 +1,20 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeModal()">{{'btn_cancel' | translate}}</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item-list-group" ng-repeat="group in settingList">
+                <div class="item item-divider">{{group.divider}}</div>
+                <div ng-repeat="item in group.items">
+                    <a ng-if="item.type == null" href="#" class="item" ng-click="{{item.action}}">{{item.text}}</a>
+                    <ion-toggle ng-if="item.type == 'checkbox'" ng-change="{{item.action}}" ng-model="item.checked" toggle-class="toggle-calm">{{item.text}}</ion-toggle>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

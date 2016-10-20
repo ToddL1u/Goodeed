@@ -1,0 +1,7 @@
+<div class="item item-avatar item-coupon {{coupon.special?'item-coupon-special':''}} item-icon-right" ng-click="showCoupon(coupon)">
+    <img class="store" ng-src="{{coupon.store.picture}}" alt="">
+    <h3>{{coupon.store.name}}</h3>
+    <p>{{coupon.name}}</p>
+    <i class="icon ion-chevron-right icon-accessory"></i>
+    <span class="item-coupon-distance">{{coupon.distance | distance}}</p>
+</div>

@@ -1,0 +1,16 @@
+<ion-modal-view>
+    <ion-content scroll="false">
+        <div class="scratch-container center" >
+            <canvas id="scratch-canvas" height="{{view_height}}" width="{view_width}"></canvas>
+            <span ng-show="loaded">
+                <span class="row scratch-line" ng-repeat="icons in slot" >
+                    <img class="item-scratch" ng-src="{{icons[0]}}" alt="">
+                    <img class="item-scratch" ng-src="{{icons[1]}}" alt="">
+                    <img class="item-scratch" ng-src="{{icons[2]}}" alt="">
+                </span>
+            <div ng-hide="hide">
+                <button class="button button-icon icon ion-ios-close" ng-click="closeModal()"></button>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <!--<ion-nav-bar>
+        
+    </ion-nav-bar>-->
+    <ion-content scroll="false">
+        <div class="bar bar-header " style="background:none;">
+            <h1 class="title"></h1>
+            <button class="button button-clear icon ion-ios-arrow-right button-stable" ng-if="!lastPage" style="color:white;" ng-click="next()"></button>
+            <button class="button button-clear button-stable icon ion-ios-close" ng-if="lastPage" style="color:white;" ng-click="done()"></button>
+        </div>
+        <ion-slide-box show-pager="true" on-slide-changed="checkPage(index)" delegate-handle="tutorial">
+            <ion-slide ng-repeat="page in pages">
+                <img style="overflow:hidden; width:100%;height:100vh;" ng-src="{{page}}" alt="">
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-modal-view>¸

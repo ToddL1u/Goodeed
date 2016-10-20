@@ -1,0 +1,15 @@
+<p> {{quest.content}}</p>
+<ion-list ng-if="quest.type =='O'">
+    <ion-radio ng-repeat="option in quest.options" ng-value="option" ng-model="data.options">{{option}}</ion-radio>
+</ion-list>
+
+<label class="item item-input" ng-if="quest.type =='T'">
+    <input type="text" ng-model="data.ans">
+</label>
+<span class="item item-catagories center">
+    <points point="+{{quest.point}}"></points><span style="color:gray;float:right;" ng-if="gm">{{quest.ans}}</span>
+</span>
+
+<div class="item-sponsor">
+
+</div>

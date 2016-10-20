@@ -1,0 +1,20 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <div class="buttons">
+            <button class="button button-icon button-clear" ng-click="closeModal()">{{'btn_cancel' | translate}}</button>
+        </div>
+        <h1 class="title">Facebook</h1>
+        <div class="buttons">
+            <button class="button button-clear button-energized" ng-click="questShare()">{{'btn_share' | translate}}</button>
+        </div>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <div>
+            <textarea class="event-share-textarea" type="text" rows="10" ng-model="share.message" placeholder="what do you think?"></textarea>
+            <button class="button button-video button-fab button-calm" ng-click="chooseVideo()">
+                    <i class="icon ion-ios-videocam"></i>
+                </button>
+        </div>
+        <div id="videoArea"></div>
+    </ion-content>
+</ion-modal-view>

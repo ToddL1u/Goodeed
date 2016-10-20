@@ -1,0 +1,22 @@
+<ion-view>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-ios-settings" ng-click="filter()"></button>
+        <!--<button class="button button-icon ion-android-star" ng-click="scheduleDelayedNotification()"></button>-->
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher pulling-text="{{'text_refresh' | translate}}" on-refresh="doRefresh()"></ion-refresher>
+        
+        <ion-list>
+            <loading list="quests"  msg="{{msg}}"></loading>
+            <ion-item class="item-icon-right item-quest" catagory="{{quest.cata}}" ng-show="quest_filter(quest.cata)" ng-repeat="quest in quests" ng-click="showQuest(quest)">
+                <div>
+                    <h3>{{quest.title}}</h3>
+                    <p>{{quest.content}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </div>
+            </ion-item>
+            
+        </ion-list>
+    </ion-content>
+</ion-view>
